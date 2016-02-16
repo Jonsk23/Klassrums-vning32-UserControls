@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Klassrumsövning30_Master_Content.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>The Contactlist</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server" method="post">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./Index.aspx">THE Contactlist</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./Index.aspx">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
+                    <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./LoadContact.aspx">Add</a></li>
+                            <li><a href="./UpdateContact.aspx">Update</a></li>
+                            <li><a href="./DeleteContact.aspx">Delete</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Phone</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./SignUP.aspx"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                    <li><a href="./Login.aspx"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <table style="width: 100%;">
+            <tr class="header">
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="main_main">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
